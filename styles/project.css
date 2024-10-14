@@ -1,8 +1,20 @@
+:root {
+    --background-color: #f4f4f4;
+    --primary-color: #2C3E50;
+    --heading-color: #34495E;
+    --white-color: #fff;
+    --border-color: #ddd;
+    --hover-bg-color: #f0f8ff;
+    --text-muted-color: #7F8C8D;
+    --link-hover-color: #2980B9;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 .projects-section {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     padding: 50px 0;
     text-align: center;
-    color: #2C3E50;
+    color: var(--primary-color);
 }
 
 .projects-section .container {
@@ -14,23 +26,24 @@
 .projects-section h2 {
     font-size: 36px;
     margin-bottom: 40px;
-    color: #34495E;
+    color: var(--heading-color);
 }
 
 .project-card {
     display: inline-block;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
     width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
     text-align: left;
     transition: background-color 0.3s ease;
 }
+
 .project-card:hover {
-    background-color: #f0f8ff;
+    background-color: var(--hover-bg-color);
 }
 
 .project-card img {
@@ -42,20 +55,21 @@
 .project-card h3 {
     font-size: 24px;
     margin-top: 15px;
-    color: #2C3E50;
+    color: var(--primary-color);
 }
+
 .project-card p {
     font-size: 16px;
     margin: 15px 0;
-    color: #7F8C8D;
+    color: var(--text-muted-color);
 }
 
 .project-card a {
     text-decoration: none;
-    color: #3498DB;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 .project-card a:hover {
-    color: #2980B9;
+    color: var(--link-hover-color);
 }
