@@ -1,8 +1,10 @@
 :root {
     --primary-color: #2C3E50;
     --secondary-color: #ECF0F1;
+    --hover-color: #b53fbd
     --background-color: #ffffff;
     --text-color: #000000;
+    --text-color2: #e36262;
 }
 
 .dark-theme {
@@ -10,6 +12,7 @@
     --secondary-color: #2C3E50;
     --background-color: #000000;
     --text-color: #ffffff;
+    --text-color2: #000000;
 }
 
 #theme-toggle {
@@ -28,6 +31,18 @@
 #theme-toggle:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+}
+
+#content > div {
+    display: none;
+}
+
+#content > div:target {
+    display: block;
+}
+
+#about {
+    display: block;
 }
 
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -93,7 +108,7 @@ nav {
 }
 
 .navMenu li a:hover {
-    color: var(--secondary-color);
+    color: var(--text-color2);
 }
 
 .about-section {
@@ -121,6 +136,42 @@ nav {
     line-height: 1.6;
     color: var(--primary-color);
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#content > div {
+    display: none;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#about, #contact {
+    max-width: 800px;
+}
+#content > div:target {
+    display: block;
+}
+
+#about {
+    display: block;
+}
+
 /*\\\\Footer\\\\\*/
 .footer-section {
     background-color: var(--primary-color);
@@ -165,4 +216,3 @@ nav {
 .social-icon:hover {
     color: var(--text-color);
 }
-
